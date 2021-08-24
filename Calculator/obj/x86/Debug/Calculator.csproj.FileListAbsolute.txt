@@ -1,0 +1,5 @@
+D:\CSharp\Calculator\Calculator\obj\x86\Debug\Calculator.csprojAssemblyReference.cache
+D:\CSharp\Calculator\Calculator\obj\x86\Debug\Calculator.Properties.Resources.resources
+D:\CSharp\Calculator\Calculator\obj\x86\Debug\Calculator.Calculator.resources
+D:\CSharp\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.GenerateResource.cache
+D:\CSharp\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.CoreCompileInputs.cache
