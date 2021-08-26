@@ -50,7 +50,7 @@ namespace Calculator
             {
                 Controller.OperatorButtonClickInPlace((num1, num2) => 
                 {
-                    decimal result = Convert.ToDecimal(Math.Sqrt((Double)num1));
+                    double result = (Math.Sqrt(num1));
                     return result;
                 });
             }
@@ -95,7 +95,7 @@ namespace Calculator
             outputLabel.DeleteSymbol();
         }
 
-        public decimal GetLabelDecimal()
+        public double GetLabeldouble()
         {
             return outputLabel.value;
         }
@@ -104,7 +104,7 @@ namespace Calculator
         {
             outputLabel.Clear();            
         }
-        public void ShowResult(decimal result)
+        public void ShowResult(double result)
         {
             outputLabel.SetText(result);
         }

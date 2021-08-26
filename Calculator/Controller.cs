@@ -13,7 +13,7 @@ namespace Calculator
         private static bool firstOperandExists = false;
         private static bool secondOperandExists = false;
         public static View view;
-        public delegate decimal Operation(decimal num1, decimal num2);
+        public delegate double Operation(double num1, double num2);
         static Operation operation;
         static Operation reservedOperaion;
         public static void OperatorButtonClick(Operation operation)
@@ -28,14 +28,14 @@ namespace Calculator
             }
             if (!firstOperandExists)
             {
-                Model.SetFirstOperand(view.GetLabelDecimal());
+                Model.SetFirstOperand(view.GetLabeldouble());
                 firstOperandExists = true;
                 view.SetFlag();
                 //view.ResetLabel();
             }
             else
             {
-                decimal result = Controller.operation(Model.firstOperand, view.GetLabelDecimal());
+                double result = Controller.operation(Model.firstOperand, view.GetLabeldouble());
                 view.ShowResult(result);
                 Model.SetFirstOperand(result);
                 view.SetFlag();
@@ -53,12 +53,12 @@ namespace Calculator
                 firstOperandExists = false;
                 secondOperandExists = false;
             }
-            decimal operand;
-            decimal result;
+            double operand;
+            double result;
 
             if (!firstOperandExists)
             {
-                operand = view.GetLabelDecimal();
+                operand = view.GetLabeldouble();
 
             }
             else
@@ -89,10 +89,10 @@ namespace Calculator
             {
                 if (!secondOperandExists)
                 {
-                    Model.SetSecondOperand(view.GetLabelDecimal());
+                    Model.SetSecondOperand(view.GetLabeldouble());
                     secondOperandExists = true;
                 }
-                decimal result = Controller.reservedOperaion(Model.firstOperand, Model.secondOperand);
+                double result = Controller.reservedOperaion(Model.firstOperand, Model.secondOperand);
                 view.ShowResult(result);
                 Model.SetFirstOperand(result);
                 view.SetFlag();

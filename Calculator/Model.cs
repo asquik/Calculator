@@ -10,16 +10,16 @@ namespace Calculator
 {
     public static class Model
     {
-        public static decimal firstOperand { get; private set; }
-        public static decimal secondOperand { get; private set; }
-        public static decimal memory { get; private set; }
+        public static double firstOperand { get; private set; }
+        public static double secondOperand { get; private set; }
+        public static double memory { get; private set; }
 
-        public static void SetFirstOperand(decimal label)
+        public static void SetFirstOperand(double label)
         {
             firstOperand = label;
         }
 
-        public static void SetSecondOperand(decimal label)
+        public static void SetSecondOperand(double label)
         {
             secondOperand = label;
         }

@@ -12,16 +12,15 @@ namespace Calculator
 {
     public partial class OutputLabel : Label
     {
-
         const int MaxLength = 15;
         bool isNegative = false;
-        bool isDecimal = false;
+        bool isdouble = false;
         public bool clearSumFlag = false;
-        public decimal value
+        public double value
         {
             get
             {
-                return Convert.ToDecimal(Text.Replace(",", ""));
+                return Convert.ToDouble(Text.Replace(",", ""));
             }
             private set
             {
@@ -50,12 +49,12 @@ namespace Calculator
 
             if(button.Text == ".")
             {
-                if (isDecimal)
+                if (isdouble)
                 {
                     AddSigns();
                     return;
                 }
-                isDecimal = true;
+                isdouble = true;
             }
             
             if (Text == "0")
@@ -83,7 +82,7 @@ namespace Calculator
 
         private void AddSigns()
         {
-            if (!isDecimal)
+            if (!isdouble)
             {
                 for (int i = Text.Length - 3; i >= 1; i -= 3)
                 {
@@ -138,9 +137,9 @@ namespace Calculator
                 return;
             }
             RemoveSigns();
-            if (isDecimal && Text[Text.Length - 1] == '.')
+            if (isdouble && Text[Text.Length - 1] == '.')
             {
-                isDecimal = false;
+                isdouble = false;
             }
             if (Text.Length == 1)
             {
@@ -157,22 +156,25 @@ namespace Calculator
         public void Clear()
         {
             Text = "0";
-            isDecimal = false;
+            isdouble = false;
             isNegative = false;
         }
 
-        public void SetText(decimal number)
+        public void SetText(double number)
         {
             isNegative = number < 0;            
-            isDecimal = number % 1 != 0;
-            string text = Convert.ToString(number);
+            isdouble = number % 1 != 0;
+            string text = number.ToString();
             text = text.Replace("-", "");
-            if (text.Length > 15)
+            if (number.ToString("G17").Length > 15)
             {
                 Text = String.Format("{0:E10}", number);
             }
-            Text = text;
-            AddSigns();
+            else
+            {
+                Text = text;
+                AddSigns();
+            }
         }
 
     }
