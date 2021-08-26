@@ -63,7 +63,19 @@ namespace Calculator
 
         private void memoryButtonClick(object sender, EventArgs e)
         {
-
+            Button button = (Button)sender;
+            if (button == buttonM)
+            {
+                Controller.MemoryAdd();
+            }
+            else if (button == buttonMR)
+            {
+                Controller.MemoryRecall();
+            }
+            else if (button == buttonMC)
+            {
+                Controller.MemoryClear();
+            }
         }
 
         private void cancelButton(object sender, EventArgs e)

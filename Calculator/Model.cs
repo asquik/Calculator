@@ -12,7 +12,17 @@ namespace Calculator
     {
         public static double firstOperand { get; private set; }
         public static double secondOperand { get; private set; }
-        public static double memory { get; private set; }
+        private static double memory = 0;
+        public static double Memory 
+        { get
+            {
+                return memory;
+            }
+            private set
+            {
+                memory = value;
+            } 
+        }
 
         public static void SetFirstOperand(double label)
         {
@@ -22,6 +32,16 @@ namespace Calculator
         public static void SetSecondOperand(double label)
         {
             secondOperand = label;
+        }
+
+        public static void SetMemory(double label)
+        {
+            Memory = label;
+        }
+
+        public static void AddMemory(double label)
+        {
+            Memory = label;
         }
     }
 

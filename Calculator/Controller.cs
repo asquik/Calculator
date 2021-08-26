@@ -108,6 +108,23 @@ namespace Calculator
             secondOperandExists = false;
         }
 
+        public static void MemoryAdd()
+        {
+            Model.AddMemory(view.GetLabeldouble());
+            view.SetFlag();
+        }
+
+        public static void MemoryRecall()
+        {
+            view.ShowResult(Model.Memory);
+            view.SetFlag();
+        }
+
+        public static void MemoryClear()
+        {
+            Model.SetMemory(0);
+        }
+
 
     }
 }
