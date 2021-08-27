@@ -34,13 +34,13 @@ namespace Calculator
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.operandButton1 = new Calculator.OperandButton();
-            this.operatorDevide = new Calculator.OperatorButton();
+            this.operatorDivide = new Calculator.OperatorButton();
             this.operandButton2 = new Calculator.OperandButton();
             this.operandButton3 = new Calculator.OperandButton();
             this.operatorPlus = new Calculator.OperatorButton();
             this.operandButton0 = new Calculator.OperandButton();
             this.operandButton4 = new Calculator.OperandButton();
-            this.operatorMulpiply = new Calculator.OperatorButton();
+            this.operatorMultiply = new Calculator.OperatorButton();
             this.operandButton5 = new Calculator.OperandButton();
             this.operandButton9 = new Calculator.OperandButton();
             this.operandButton6 = new Calculator.OperandButton();
@@ -95,7 +95,7 @@ namespace Calculator
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.operandButton1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.operatorDevide, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.operatorDivide, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.operandButton2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.operandButton3, 2, 1);
@@ -103,7 +103,7 @@ namespace Calculator
             this.tableLayoutPanel1.Controls.Add(this.operatorPlus, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.operandButton0, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.operandButton4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.operatorMulpiply, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.operatorMultiply, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.operandButton5, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.operandButton9, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.operandButton6, 2, 2);
@@ -146,17 +146,17 @@ namespace Calculator
             this.operandButton1.UseVisualStyleBackColor = true;
             this.operandButton1.Click += new System.EventHandler(this.operandButtonClick);
             // 
-            // operatorDevide
+            // operatorDivide
             // 
-            this.operatorDevide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.operatorDevide.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operatorDevide.Location = new System.Drawing.Point(228, 262);
-            this.operatorDevide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.operatorDevide.Name = "operatorDevide";
-            this.operatorDevide.Size = new System.Drawing.Size(69, 61);
-            this.operatorDevide.TabIndex = 16;
-            this.operatorDevide.Text = "/";
-            this.operatorDevide.Click += new System.EventHandler(this.operatorButtonClick);
+            this.operatorDivide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operatorDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operatorDivide.Location = new System.Drawing.Point(228, 262);
+            this.operatorDivide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.operatorDivide.Name = "operatorDivide";
+            this.operatorDivide.Size = new System.Drawing.Size(69, 61);
+            this.operatorDivide.TabIndex = 16;
+            this.operatorDivide.Text = "/";
+            this.operatorDivide.Click += new System.EventHandler(this.operatorButtonClick);
             // 
             // operandButton2
             // 
@@ -222,17 +222,17 @@ namespace Calculator
             this.operandButton4.UseVisualStyleBackColor = true;
             this.operandButton4.Click += new System.EventHandler(this.operandButtonClick);
             // 
-            // operatorMulpiply
+            // operatorMultiply
             // 
-            this.operatorMulpiply.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.operatorMulpiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operatorMulpiply.Location = new System.Drawing.Point(228, 197);
-            this.operatorMulpiply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.operatorMulpiply.Name = "operatorMulpiply";
-            this.operatorMulpiply.Size = new System.Drawing.Size(69, 61);
-            this.operatorMulpiply.TabIndex = 12;
-            this.operatorMulpiply.Text = "*";
-            this.operatorMulpiply.Click += new System.EventHandler(this.operatorButtonClick);
+            this.operatorMultiply.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operatorMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operatorMultiply.Location = new System.Drawing.Point(228, 197);
+            this.operatorMultiply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.operatorMultiply.Name = "operatorMultiply";
+            this.operatorMultiply.Size = new System.Drawing.Size(69, 61);
+            this.operatorMultiply.TabIndex = 12;
+            this.operatorMultiply.Text = "*";
+            this.operatorMultiply.Click += new System.EventHandler(this.operatorButtonClick);
             // 
             // operandButton5
             // 
@@ -471,11 +471,11 @@ namespace Calculator
         private OperandButton operandButton7;
         private OperandButton operandButton8;
         private OperandButton operandButton9;
-        private OperatorButton operatorMulpiply;
+        private OperatorButton operatorMultiply;
         private OperandButton operandButton0;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private OperatorButton operatorDevide;
+        private OperatorButton operatorDivide;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private OperatorButton operatorEquals;
         private OperatorButton operatorSqrt;

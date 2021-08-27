@@ -22,6 +22,102 @@ namespace Calculator
             Button button = (Button)sender;
             outputLabel.Append(button);
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            if (keyData == Keys.D1 || keyData == Keys.NumPad1)
+            {
+                operandButton1.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D2 || keyData == Keys.NumPad2)
+            {
+                operandButton2.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D3 || keyData == Keys.NumPad3)
+            {
+                operandButton3.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D4 || keyData == Keys.NumPad4)
+            {
+                operandButton4.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D5 || keyData == Keys.NumPad5)
+            {
+                operandButton5.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D6 || keyData == Keys.NumPad6)
+            {
+                operandButton6.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D7 || keyData == Keys.NumPad7)
+            {
+                operandButton7.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D8 || keyData == Keys.NumPad8)
+            {
+                operandButton8.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D9 || keyData == Keys.NumPad9)
+            {
+                operandButton9.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D0 || keyData == Keys.NumPad0)
+            {
+                operandButton0.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Decimal || keyData == Keys.OemPeriod)
+            {
+                button1.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.D0 || keyData == Keys.NumPad0)
+            {
+                operandButton0.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Back || keyData == Keys.Delete)
+            {
+                buttonDel.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Add)
+            {
+                operatorPlus.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Multiply)
+            {
+                operatorMultiply.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Subtract || keyData == Keys.OemMinus)
+            {
+                operatorMinus.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Divide)
+            {
+                operatorDivide.PerformClick();
+                return true;
+            }
+            else if (keyData == Keys.Enter)
+            {
+                operatorEquals.PerformClick();
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void operatorButtonClick(object sender, EventArgs e)
         {
@@ -34,11 +130,11 @@ namespace Calculator
             {
                 Controller.OperatorButtonClick((num1, num2) => { return num1 - num2; });
             }
-            else if (button == operatorMulpiply)
+            else if (button == operatorMultiply)
             {
                 Controller.OperatorButtonClick((num1, num2) => { return num1 * num2; });
             }
-            else if (button == operatorDevide)
+            else if (button == operatorDivide)
             {
                 Controller.OperatorButtonClick((num1, num2) => { return num1 / num2; });
             }
@@ -76,6 +172,12 @@ namespace Calculator
             {
                 Controller.MemoryClear();
             }
+        }
+
+
+        private void View_KeyDown(object sender, EventArgs e)
+        {
+
         }
 
         private void cancelButton(object sender, EventArgs e)
